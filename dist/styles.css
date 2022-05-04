@@ -1,0 +1,12 @@
+html {
+  background-color: black;
+  font-family: 'Saira Stencil One', cursive;
+  text-align: center;
+  color: rgba(217, 95, 95, 0.7);
+}
+
+img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
