@@ -18,6 +18,7 @@ let gamesSchema = new mongoose.Schema({
   price_text: {type: String, required: true},
   min_age: {type: Number, required: true},
   rank: Number,
+  favorite: { type: Boolean, default: 0 },
 })
 
 module.exports = { gamesSchema };
