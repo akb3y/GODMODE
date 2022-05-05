@@ -25,8 +25,6 @@
 <!-- ABOUT THE PROJECT -->
 ## Godmode
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 A game recomendation app that allows the user to refine results based on parameters such as number of players and minimum age of players.  Filtered results are returned in order of highest rated game first.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -50,7 +48,6 @@ A game recomendation app that allows the user to refine results based on paramet
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
