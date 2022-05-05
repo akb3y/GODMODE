@@ -1,8 +1,13 @@
-import React from 'react'
-import Home from './pages/Home/Home.jsx'
-import Results from './pages/Result/Result.jsx'
-import axios from 'axios'
-import { IoIosArrowBack } from "react-icons/io";
+import axios from 'axios';
+import React from 'react';
+
+import Details from './pages/Details/Details.jsx';
+import Home from './pages/Home/Home.jsx';
+import Results from './pages/Result/Results.jsx';
+
+import Footer from './Footer.jsx';
+import Header from './Header.jsx';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -12,9 +17,13 @@ class App extends React.Component {
             games: [],
             age: 18,
             players: 2,
+            game: {},
         }
         this.handleChange = this.handleChange.bind(this);
         this.getGames = this.getGames.bind(this);
+        this.handleGameClick = this.handleGameClick.bind(this);
+        this.backClick = this.backClick.bind(this);
+        this.headerClick = this.headerClick.bind(this);
     }
 
     handleChange(e){
@@ -29,28 +38,48 @@ class App extends React.Component {
         .catch((err) => console.error(err));
     }
 
+    handleGameClick(index){
+        this.setState({view: 'details', game: this.state.games[index]
+        })
+    }
+
+    backClick(){
+        if (this.state.view === 'details'){
+            this.setState({view: 'results'})
+        } else if(this.state.view === 'results'){
+             this.setState({view: 'home', games: [], age: 18, players: 2, game: {}})
+        }
+    }
+
+    headerClick(){
+        this.setState({view: 'home', games: [], age: 18, players: 2, game: {}})
+    }
+
     render() {
-        const headerText = this.state.view === 'home' ? 'What game do you desire' : this.state.view === 'results' ? 'Choose another game.' : 'Pick another game.';
+        const headerText = this.state.view === 'home' ? 'What game do you desire?' : this.state.view === 'results' ? 'Choose another game.' : 'Pick another game.';
 
         return (
-            <div className='app-container'>
-            <div className="header-container">
-            <h1>GODMODE</h1>
-            <h6> {this.state.view !== 'home' && <IoIosArrowBack />} {headerText}</h6>
-            </div>
-            <div className="page-container">
-                {this.state.view === 'home' && <Home handleChange={this.handleChange} getGames={this.getGames}/>}
-                {this.state.view === 'results' && <Results games={this.state.games} />}
-                {this.state.view === 'details' && <Details />}
-            </div>
-            <div>
-                <br /><br /><br />
-                ©GODMODE
-                <br />
-                Powered by https://www.boardgameatlas.com/api/docs
-            </div>
-            </div>
+          <div className='app-container'>
 
+              <Header
+                backClick={this.backClick}
+                headerClick={this.headerClick}
+                headerText={headerText}
+                view={this.state.view}
+              />
+
+              <div className='page-container'>
+
+                {this.state.view === 'home' && <Home handleChange={this.handleChange} getGames={this.getGames}/>}
+
+                {this.state.view === 'results' && <Results games={this.state.games} handleGameClick={this.handleGameClick} />}
+
+                {this.state.view === 'details' && <Details game={this.state.game}/>}
+              </div>
+              <br />
+              <br />
+              <Footer />
+          </div>
         )
     }
 }

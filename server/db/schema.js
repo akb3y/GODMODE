@@ -9,6 +9,7 @@ let gamesSchema = new mongoose.Schema({
   max_playtime: {type: Number, required: true},
   description_preview: {type: String, required: true},
   images: {
+    thumb: {type: String, required: true},
     small: {type: String, required: true},
   },
   average_user_rating: {type: Number, required: true},

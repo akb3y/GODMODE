@@ -1,15 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 function MinAge(props){
 
-  let ageRange = Array.from({length: 18}, (_, i) => i + 1)
+  const ageRange = Array.from({length: 18}, (_, i) => i + 1);
+
   return(
     <>
       <select name='age' onChange={props.handleChange}>
-        <option disabled selected>Minimum Age of Players</option>
+        <option disabled selected>
+          Minimum Age of Players
+       </option>
         {ageRange.map((age, index) => {
-      return <option key={index} value={age}>{age}</option>
-  })}
+          return (
+          <option key={index} value={age}>
+            {age}
+          </option>
+          )
+        })}
     </select>
     </>
   );

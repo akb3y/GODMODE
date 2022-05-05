@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { Boardgame } = require('./index.js')
 
-const API_URL = `https://${process.env.API_HOST}/api/search?order_by=rating&limit=100&skip=900&client_id=${process.env.API_KEY}`;
+const API_URL = `https://${process.env.API_HOST}/api/search?order_by=rank&limit=100&skip=900&client_id=${process.env.API_KEY}`;
 
 const getGames = () =>
   axios

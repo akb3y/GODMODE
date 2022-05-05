@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function Game({game}){
+function Game(props){
 return(
-        <div className="game-container">
-          <span>
-          <img src={game.images.small} />
-          {game.name}
-          </span>
+        <div className="game-container" onClick={props.handleGameClick}>
+          <img className="images" src={props.game.images.small} />
+          <div className="game-name">
+            {props.game.name}
+         </div>
         </div>
   );
 }

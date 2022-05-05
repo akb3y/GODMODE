@@ -5,8 +5,125 @@ html {
   color: rgba(217, 95, 95, 0.7);
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bullet-list {
+  font-size: x-small;
+  text-align: left;
+}
+
+.header {
+  font-size: 75px;
+  margin-bottom: -20px;
+}
+
+select {
+  background: #D95f5f;
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+button {
+  background-color: rgba(126, 54, 50, .71);
+  font-weight: bolder;
+  color: #D95f5f;
+  width: 200px;
+  height: 30px;
+  box-shadow: 0 0 2px 2px rgba(166, 72, 68, 0.71);
+}
+
+.game-container {
+display: flex;
+flex-direction: row;
+padding: 0px 20px 0px;
+}
+.images {
+  margin-right: 20px;
+  padding: 10px;
+}
 img {
-  height: 70px;
-  width: 70px;
-  object-fit: cover;
+  height: 90px;
+  width: 90px;
+  object-fit: fill;
+  padding-left: 20px;
+}
+
+.game-name {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: xx-small;
+  background-color: black;
+  z-index: 3;
+  text-align: center;
+}
+
+.page-container {
+  height: 90%;
+  overflow: hidden;
+}
+
+.large-img {
+  width: 350px;
+  height: 350px
+}
+
+.empty-div {
+  background-color: #D95f5f;
+  height: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.game1-name {
+  font-size: 50px;
+}
+
+.description {
+  /* background-color: rgba(217, 95, 95, .25); */
+}
+
+.walmart {
+color: #78b9e7;
+font-size: 70px;
+padding: 0;
+margin: 0;
+margin-bottom: -25px;
+}
+
+.amazon {
+  color: #FF9900;
+font-size: 20px;
+padding: 0;
+margin: 0;
+}
+
+.target {
+  color:  #CC0000;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #D95f5f;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: row;
 }
