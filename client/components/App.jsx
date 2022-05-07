@@ -24,6 +24,7 @@ class App extends React.Component {
         this.handleGameClick = this.handleGameClick.bind(this);
         this.backClick = this.backClick.bind(this);
         this.headerClick = this.headerClick.bind(this);
+        this.setGame = this.setGame.bind(this);
     }
 
     handleChange(e){
@@ -38,9 +39,13 @@ class App extends React.Component {
         .catch((err) => console.error(err));
     }
 
-    handleGameClick(index){
+    handleGameClick(index) {
         this.setState({view: 'details', game: this.state.games[index]
         })
+    }
+
+    setGame(selectedGame) {
+        this.setState({ game: selectedGame })
     }
 
     backClick(){
@@ -74,7 +79,7 @@ class App extends React.Component {
 
                 {this.state.view === 'results' && <Results games={this.state.games} handleGameClick={this.handleGameClick} />}
 
-                {this.state.view === 'details' && <Details game={this.state.game}/>}
+                {this.state.view === 'details' && <Details game={this.state.game} setGame={this.setGame}/>}
               </div>
               <br />
               <br />

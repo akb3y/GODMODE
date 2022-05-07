@@ -4,7 +4,7 @@ import BuyNow from '../../BuyNow.jsx';
 import Divider from '../../Divider.jsx';
 import Favorite from '../../Favorite.jsx'
 
-function Details({game}){
+function Details({game, setGame}){
 
   const summaryDetails =  [
     <span><u># Players</u>: {' '} {game.players}</span>,
@@ -15,7 +15,7 @@ function Details({game}){
   const purchaseDetails = [
     <span><u>Rating</u>: {' '} {parseFloat(game.average_user_rating).toFixed(2) } / 5</span>,
     <span><u>Price</u>: {' '} {game.price_text}</span>,
-    <span><u>Favorite</u>: {' '} <Favorite game={game}/></span>
+    <span><u>Favorite</u>: {' '} <Favorite game={game} setGame={setGame}/></span>
   ];
 
   return(

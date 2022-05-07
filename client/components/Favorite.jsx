@@ -14,18 +14,25 @@ class Favorite extends React.Component {
   }
 
   handleFavorited() {
-    const updatedValue = this.props.game.favorite === 0 ? 1 : 0;
-
+    const updatedValue = this.props.game.favorite === true ? false : true;
+console.log(updatedValue)
     axios.put(`/favorite/?id=${this.props.game._id}` ,
     {favorite: updatedValue})
     .then(() => this.setState({
-      favorited: !this.state.favorited
+      favorited: !this.state.favorited,
     }))
+    .then(() => {
+      const updatedGame = {
+        ...this.props.game,
+        favorite: this.state.favorited,
+      }
+      this.props.setGame(updatedGame)
+    })
     .catch((err) => console.error(err));
   };
 
   render() {
-    if (this.state.favorited === true ?? this.props.game.favorite > 0) {
+    if (this.state.favorited === true || this.props.game.favorite === true) {
       return (<span onClick={this.handleFavorited}><BsSuitHeartFill /></span>)
     } else {
       return (<span onClick={this.handleFavorited}><BsSuitHeart /></span>)

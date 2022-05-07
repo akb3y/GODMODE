@@ -20,7 +20,7 @@ const getGames = (params, callback) => {
 
 const favoriteGame = (params, callback) => {
   console.log('hitting db', 'params: ', params)
-  Boardgame.findOneAndUpdate(`${params.id}`, {"favorite": params.favorite}, (err, results) => {
+  Boardgame.updateOne({_id: params.id}, { $set: {favorite: params.favorite}}, (err, results) => {
     if (err) callback(err, null);
     else callback(null, results);
   })
