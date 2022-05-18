@@ -27,6 +27,27 @@
 
 A game recomendation app that allows the user to refine results based on parameters such as number of players and minimum age of players.  Filtered results are returned in order of highest rated game first.
 
+![GODMODE VIDEO](VIDEO_URL)
+
+#### Filter Criteria
+
+- Allows a user to filter results by desired age of players.
+- Allows a user to filter results by desired number of players.
+
+![Filter Criteria](PHOTO_URL "Filter Criteria Screenshot")
+
+#### View Results
+
+- Allows a user to view a list of the top 20 highest rated tabletop games based on their previously selected filter criteria.
+
+![View Results](PHOTO_URL "View Results Screenshot")
+
+#### Expand Game
+
+- Allows a user to select a game in the results list to view detailed information about that game. 
+
+![Expand Game](PHOTO_URL "Expanded Game Screenshot")
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
