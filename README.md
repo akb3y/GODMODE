@@ -98,7 +98,7 @@ A game recomendation app that allows the user to refine results based on paramet
 <!-- CONTACT -->
 ## Contact
 
-Alisha Barraw - alisha.barraw@gmail.com
+Alisha Barraw - [E-mail](mailto:alisha.barraw@gmail.com) | [LinkedIn](https://www.linkedin.com/in/alisha-barraw)
 
 Project Link: [https://github.com/akb3y/godmode](https://github.com/akb3y/MVP)
 
