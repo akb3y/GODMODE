@@ -28,6 +28,8 @@
 A game recomendation app that allows the user to refine results based on parameters such as number of players and minimum age of players.  Filtered results are returned in order of highest rated game first.
 
 ![GODMODE VIDEO](/GODMODEVideo.mov)
+<video src=GODMODEVideo.mov controls="controls" style="max-width: 730px;">
+</video>
 
 #### Filter Criteria
 
